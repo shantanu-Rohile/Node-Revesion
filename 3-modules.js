@@ -1,0 +1,10 @@
+let names=require("./4-names")
+let sayHi=require("./5-utils")
+let data=require("./6-alternate-flavour")
+require('./7-mind-grenade')
+console.log(data)
+
+sayHi("Butukus")
+sayHi("Susan")
+sayHi(names.jhon)
+sayHi(names.peter)
