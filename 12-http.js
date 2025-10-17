@@ -1,14 +1,18 @@
-const http=require('http');
+const http=require('http')
+
 const server=http.createServer((req,res)=>{
-    if(req.url==='/'){
-        res.end('This is our home page.')
-    }
-    if(req.url === '/about'){
-        res.end('Know thyself know thy enemy 100 battles 100 victories')
-    }
+   if(req.url==='/'){
+    res.end('Home Page');
+   }
 
-    res.end('<h1>Oops!</h1> <p>we do not have page your are looking for</p> <a href="/">Back Home</a>')
-
+   if(req.url==='/about'){
+    for(i=0;i<1000;i++){
+        for(j=0;j<1000;j++){
+            console.log("Chintu")
+        }
+    }
+    res.end("About Page")
+   }
 })
 
-server.listen(5000)
+server.listen(5000,console.log("server is running"))
